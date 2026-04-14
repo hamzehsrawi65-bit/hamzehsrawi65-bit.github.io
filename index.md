@@ -1,118 +1,62 @@
----
-layout: default
----
-
-# Your Name
+# Hamza Khaled Awad
 
 ## About
 
-I am a recent graduate in [Computer Science / Electrical Engineering] from [University Name] in Jordan. I am building expertise in applied AI and ML systems through the AI.SPIRE program. I am most interested in [your areas of interest — e.g., NLP, computer vision, data engineering, deployment].
+I am an Artificial Intelligence graduate from the University of Jordan with a strong interest in machine learning, computer vision, deep learning, and natural language processing. Through academic projects and hands-on experience, I have worked on building practical AI systems for real-world problems. I am especially interested in developing AI solutions that combine technical performance with clear business value.
 
----
+## Foundations
 
-## Projects
+### Python Environment and Git Workflow
+Built foundational development skills through Python environment setup, Git and GitHub workflows, and structured project organization.
 
-### Foundations
+- Repo: [My GitHub Profile](https://github.com/hamzehsrawi65-bit)
+- Skills: Python, Git, GitHub
 
-**Git, Environment Setup & Collaboration**
+## ML & NLP
 
-- **Environment & Git Workflows** — Set up a reproducible Python development environment and practiced branching, merging, and pull request workflows.
-  - Repo: [your-repo-link](#)
-  - Skills: Git, GitHub, VS Code, virtual environments, branch management
+### Spam Classification using NLP
+Built a binary text classification system to detect spam and non-spam messages using text preprocessing, TF-IDF, and classical machine learning models.
 
-- **Team Collaboration Pipeline** — Collaborated on a shared repository using feature branches and code review, resolving merge conflicts and maintaining a clean commit history.
-  - Repo: [your-repo-link](#)
-  - Skills: Git collaboration, pull requests, code review, merge conflict resolution
+- Repo: [Add your repo link here](#)
+- Skills: NLP, Scikit-learn, TF-IDF
 
-**Data Pipelines & PyTorch Fundamentals**
+### Deep Learning in Dermatology
+Developed a CNN-based classifier for skin tumor identification, including dataset preparation, preprocessing, and model evaluation.
 
-- **Data Pipeline** — Built an end-to-end data loading and preprocessing pipeline using pandas, with validation checks and reproducible outputs.
-  - Repo: [your-repo-link](#)
-  - Skills: Python, pandas, data cleaning, pipeline design
+- Repo: [Add your repo link here](#)
+- Skills: Deep Learning, CNNs, Python
 
-- **PyTorch Model** — Implemented a neural network training loop in PyTorch, including data loading, forward/backward passes, and evaluation metrics.
-  - Repo: [your-repo-link](#)
-  - Skills: PyTorch, tensor operations, training loops, model evaluation
+### Computer Vision for Geometric Shapes
+Developed a MATLAB vision system to detect and classify geometric shapes using image processing and feature extraction techniques.
 
-**Relational Databases & SQL**
+- Repo: [Add your repo link here](#)
+- Skills: MATLAB, Computer Vision, Image Processing
 
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
-  - Skills: SQL, PostgreSQL, data modeling
+## Retrieval & Knowledge Graphs
 
-**Data Visualization & Communication**
+### Retrieval-Based Interview Question Generation
+Built a retrieval-based component for generating interview questions with contextual and domain-aligned output in an interview practice platform.
 
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
-  - Skills: Matplotlib, data storytelling
+- Repo: [Add your repo link here](#)
+- Skills: Retrieval, NLP, Semantic Similarity
 
----
+## Deployment
 
-### Machine Learning & NLP
+### MRZ Extraction for Identity Documents
+Designed an AI-powered pipeline for extracting structured data from passports and civil ID documents to support automated registration and identity verification workflows.
 
-**Machine Learning Fundamentals**
+- Repo: [Add your repo link here](#)
+- Skills: OCR, Computer Vision, NLP
 
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
-  - Skills: scikit-learn, model evaluation
+## Capstone
 
-**Natural Language Processing**
+### Graduation Project — Interview Practice Platform
+Built a web-based interview practice platform that simulates realistic interview sessions using retrieval-based NLP, speech emotion recognition, behavioral analysis, and automated performance reporting.
 
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
-  - Skills: spaCy, text preprocessing, NLP pipelines
-
-**Deep Learning for NLP**
-
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
-  - Skills: PyTorch, Hugging Face, transformers
-
----
-
-### Retrieval & Knowledge Graphs
-
-**Retrieval-Augmented Generation**
-
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
-  - Skills: Weaviate, RAG pipelines, embeddings
-  - [Read more](projects/sample-project.md) *(optional -- use for projects complex enough to warrant a detail page)*
-
-**Knowledge Graphs**
-
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
-  - Skills: Triple stores, SPARQL, knowledge representation
-
----
-
-### Deployment
-
-**API Development & Containerization**
-
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
-  - Skills: FastAPI, Docker, deployment
-
-**Monitoring & Production Systems**
-
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
-  - Skills: Monitoring, logging, production reliability
-
----
-
-### Capstone
-
-- **Project Name** — One sentence describing your capstone.
-  - Repo: [link](#)
-  - Skills: Full-stack AI/ML system
-
----
+- Repo: [Add your repo link here](#)
+- Skills: PyTorch, Transformers, Django/Flask
 
 ## Contact
 
-- **GitHub:** [your-github-username](https://github.com/your-github-username)
-- **LinkedIn:** [your-linkedin-profile](https://linkedin.com/in/your-profile)
-- **Email:** your.email@example.com
+- GitHub: [hamzehsrawi65-bit](https://github.com/hamzehsrawi65-bit)
+- Email: hamzehsrawi65@gmail.com
