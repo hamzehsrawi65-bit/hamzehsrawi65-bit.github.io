@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamza Khaled Awad | AI/ML Engineer</title>
+  <style>
+    :root {
+      --bg: #071311;
+      --bg-soft: #0b1f1b;
+      --card: rgba(12, 31, 27, 0.72);
+      --line: rgba(120, 255, 214, 0.14);
+      --text: #e7fff8;
+      --muted: #a8c7bf;
+      --accent: #39f2b4;
+      --accent-2: #8effd8;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(57, 242, 180, 0.14), transparent 30%),
+        radial-gradient(circle at 80% 0%, rgba(142, 255, 216, 0.12), transparent 26%),
+        linear-gradient(180deg, #06100f 0%, #081614 45%, #071311 100%);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(6, 16, 15, 0.72);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-badge {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(57, 242, 180, 0.2), rgba(142, 255, 216, 0.08));
+      border: 1px solid var(--line);
+      color: var(--accent);
+      box-shadow: var(--shadow);
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover { color: var(--accent-2); }
+
+    .hero {
+      padding: 92px 0 54px;
+      min-height: calc(100vh - 76px);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(57, 242, 180, 0.08);
+      border: 1px solid var(--line);
+      color: var(--accent-2);
+      font-size: 0.92rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 5.4rem);
+      line-height: 0.98;
+      margin: 0;
+      letter-spacing: -0.04em;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+      text-shadow: 0 0 28px rgba(57, 242, 180, 0.18);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.15rem, 2vw, 1.6rem);
+      color: var(--accent-2);
+      margin: 1rem 0 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin: 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.8rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      min-height: 50px;
+      padding: 0 1.2rem;
+      border-radius: 14px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #77ffd3);
+      color: #04241b;
+      border: none;
+      box-shadow: 0 16px 30px rgba(57, 242, 180, 0.22);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text);
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 6px);
+      padding: 1.4rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -40px -40px auto;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(57, 242, 180, 0.18), transparent 65%);
+      pointer-events: none;
+    }
+
+    .mini-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .stat {
+      padding: 1rem;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(120, 255, 214, 0.09);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.4rem;
+      color: var(--accent-2);
+      margin-bottom: 0.25rem;
+    }
+
+    .section {
+      padding: 34px 0 34px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 0 0 0.7rem;
+      letter-spacing: -0.03em;
+    }
+
+    .section-subtitle {
+      margin: 0 0 1.8rem;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.35rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .chip {
+      padding: 0.7rem 1rem;
+      border-radius: 999px;
+      background: rgba(57, 242, 180, 0.08);
+      border: 1px solid var(--line);
+      color: var(--accent-2);
+      font-weight: 600;
+      font-size: 0.94rem;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .project-card {
+      background: linear-gradient(180deg, rgba(15, 34, 30, 0.9), rgba(10, 23, 20, 0.92));
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 1.4rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-height: 280px;
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .project-type {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      background: rgba(57, 242, 180, 0.08);
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      white-space: nowrap;
+    }
+
+    .project-card h3 {
+      margin: 0.2rem 0 0;
+      font-size: 1.3rem;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: auto;
+    }
+
+    .tag {
+      border-radius: 999px;
+      padding: 0.48rem 0.75rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(120, 255, 214, 0.1);
+      font-size: 0.85rem;
+      color: #d9fff4;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .project-links a {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.2rem;
+      align-items: stretch;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.1rem;
+      border-radius: 18px;
+      border: 1px solid rgba(120, 255, 214, 0.1);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .contact-item span { color: var(--muted); }
+    .contact-item strong { color: var(--text); }
+
+    footer {
+      padding: 28px 0 40px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid-2,
+      .project-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 72px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.9rem 0;
+      }
+
+      .nav-links {
+        gap: 0.8rem 1rem;
+      }
+
+      h1 { font-size: 2.6rem; }
+      .section { padding: 28px 0; }
+      .container { width: min(var(--max), calc(100% - 1rem)); }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <span class="brand-badge">HK</span>
+        <span>Hamza Khaled Awad</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">AI Portfolio • ML • CV • NLP • Deep Learning</div>
+          <h1>Hamza <span>Khaled Awad</span></h1>
+          <div class="hero-subtitle">AI/ML Engineer</div>
+          <p>
+            Artificial Intelligence graduate from the University of Jordan with strong interest in machine learning,
+            computer vision, deep learning, and natural language processing. I build practical AI systems that solve
+            real-world problems and support clear business value.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View My Projects</a>
+            <a class="btn btn-secondary" href="https://github.com/hamzehsrawi65-bit" target="_blank" rel="noreferrer">GitHub Profile</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="mini-label">Quick Overview</div>
+          <div class="card" style="padding: 1rem; background: rgba(255,255,255,0.03); border-radius: 20px;">
+            <h3 style="margin-bottom: 0.35rem;">Focused Areas</h3>
+            <p>Machine Learning, Computer Vision, Deep Learning, NLP, OCR, Transformers, and applied AI workflows.</p>
+          </div>
+          <div class="stat-grid">
+            <div class="stat">
+              <strong>5+</strong>
+              <span>Applied AI projects</span>
+            </div>
+            <div class="stat">
+              <strong>1</strong>
+              <span>Industry internship</span>
+            </div>
+            <div class="stat">
+              <strong>2026</strong>
+              <span>University graduation</span>
+            </div>
+            <div class="stat">
+              <strong>Jordan</strong>
+              <span>Based in Amman / Zarqa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">
+          I enjoy building intelligent systems that connect strong technical implementation with practical needs.
+          My background includes academic AI projects, hands-on experimentation, and internship work involving OCR,
+          computer vision, NLP, and workflow automation.
+        </p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Education</h3>
+            <p>Bachelor's degree in Artificial Intelligence from the University of Jordan.</p>
+          </div>
+          <div class="card">
+            <h3>Career Direction</h3>
+            <p>I am interested in AI engineering roles focused on machine learning, deep learning, NLP, and computer vision solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <p class="section-subtitle">Hands-on work that strengthened my ability to apply AI in real business workflows.</p>
+        <div class="card">
+          <h3>AI Intern — Integrated Technology Group (ITG)</h3>
+          <p>
+            Worked on an AI-powered MRZ extraction pipeline for passports and civil ID documents within a hotel processing workflow.
+            Applied OCR, computer vision, and NLP techniques to automate identity data extraction and improve document handling efficiency.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">A mix of engineering tools, AI methods, and libraries used across my projects.</p>
+        <div class="skills">
+          <span class="chip">Python</span>
+          <span class="chip">PyTorch</span>
+          <span class="chip">Scikit-learn</span>
+          <span class="chip">Transformers</span>
+          <span class="chip">OpenCV</span>
+          <span class="chip">MATLAB</span>
+          <span class="chip">Computer Vision</span>
+          <span class="chip">Deep Learning</span>
+          <span class="chip">NLP</span>
+          <span class="chip">OCR</span>
+          <span class="chip">Semantic Similarity</span>
+          <span class="chip">Feature Engineering</span>
+          <span class="chip">Classification</span>
+          <span class="chip">Model Evaluation</span>
+          <span class="chip">Git & GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">A selection of projects that reflect my work in NLP, computer vision, deep learning, and applied AI systems.</p>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-top">
+              <div>
+                <div class="project-type">Capstone</div>
+                <h3>Interview Practice Platform</h3>
+              </div>
+            </div>
+            <p>
+              Built a web-based platform that simulates realistic interview sessions using retrieval-based question generation,
+              speech emotion recognition, behavioral analysis, and automated performance reporting.
+            </p>
+            <div class="tag-list">
+              <span class="tag">PyTorch</span>
+              <span class="tag">Transformers</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Django/Flask</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Repo coming soon</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <div>
+                <div class="project-type">Industry Project</div>
+                <h3>MRZ Extraction for Identity Documents</h3>
+              </div>
+            </div>
+            <p>
+              Designed an AI pipeline for extracting structured personal information from passports and civil ID documents
+              using OCR, computer vision, and NLP for automated verification workflows.
+            </p>
+            <div class="tag-list">
+              <span class="tag">OCR</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">NLP</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Repo coming soon</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <div>
+                <div class="project-type">ML & NLP</div>
+                <h3>Spam Classification using NLP</h3>
+              </div>
+            </div>
+            <p>
+              Built a binary classifier for spam detection using preprocessing, tokenization, stopword removal, TF-IDF,
+              and classical machine learning models such as Naive Bayes, Logistic Regression, and SVM.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">TF-IDF</span>
+              <span class="tag">Classification</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Repo coming soon</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <div>
+                <div class="project-type">Computer Vision</div>
+                <h3>Geometric Shape Detection</h3>
+              </div>
+            </div>
+            <p>
+              Developed a MATLAB-based computer vision system to detect and classify geometric shapes using image processing
+              and feature extraction techniques.
+            </p>
+            <div class="tag-list">
+              <span class="tag">MATLAB</span>
+              <span class="tag">Image Processing</span>
+              <span class="tag">Feature Extraction</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Repo coming soon</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <div>
+                <div class="project-type">Deep Learning</div>
+                <h3>Skin Tumor Classification</h3>
+              </div>
+            </div>
+            <p>
+              Built a CNN-based model for skin tumor identification, including dataset preparation, preprocessing,
+              and evaluation across deep learning stages.
+            </p>
+            <div class="tag-list">
+              <span class="tag">CNNs</span>
+              <span class="tag">Deep Learning</span>
+              <span class="tag">Python</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Repo coming soon</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <div>
+                <div class="project-type">Retrieval</div>
+                <h3>Retrieval-Based Question Generation</h3>
+              </div>
+            </div>
+            <p>
+              Built a retrieval-focused component for generating contextual interview questions aligned with different domains
+              and supported by semantic matching logic.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Retrieval</span>
+              <span class="tag">Semantic Similarity</span>
+              <span class="tag">NLP</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Repo coming soon</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">Open to AI/ML opportunities, collaboration, and professional connections.</p>
+        <div class="contact-grid">
+          <div class="card">
+            <h3>Let’s Connect</h3>
+            <p>
+              If you want to discuss AI projects, internships, entry-level opportunities, or collaboration,
+              feel free to reach out.
+            </p>
+            <div class="hero-actions" style="margin-top: 1.25rem;">
+              <a class="btn btn-primary" href="mailto:hamzehsrawi65@gmail.com">Send Email</a>
+              <a class="btn btn-secondary" href="https://github.com/hamzehsrawi65-bit" target="_blank" rel="noreferrer">Open GitHub</a>
+            </div>
+          </div>
+          <div class="card contact-list">
+            <div class="contact-item">
+              <span>Email</span>
+              <strong>hamzehsrawi65@gmail.com</strong>
+            </div>
+            <div class="contact-item">
+              <span>GitHub</span>
+              <strong>hamzehsrawi65-bit</strong>
+            </div>
+            <div class="contact-item">
+              <span>Location</span>
+              <strong>Jordan</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Hamza Khaled Awad — AI/ML Portfolio
+  </footer>
+</body>
+</html>
