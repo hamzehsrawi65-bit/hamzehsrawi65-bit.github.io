@@ -65,17 +65,27 @@
       letter-spacing: 0.02em;
     }
 
-.profile-logo {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  object-fit: cover;
-  object-position: center top;
-  border: 1px solid rgba(120, 255, 214, 0.14);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  background: rgba(57, 242, 180, 0.08);
-  display: block;
-}
+    .profile-logo-wrap {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(120, 255, 214, 0.14);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      background: rgba(57, 242, 180, 0.08);
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .profile-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(2.35);
+      transform-origin: center 30%;
+    }
+
     .nav-links {
       display: flex;
       align-items: center;
@@ -427,7 +437,9 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a href="#home" class="brand">
-        <img src="profile.jpg" alt="Hamza Khaled Awad" class="profile-logo">
+        <div class="profile-logo-wrap">
+          <img src="profile.jpg.jpeg" alt="Hamza Khaled Awad" class="profile-logo">
+        </div>
         <span>Hamza Khaled Awad</span>
       </a>
       <div class="nav-links">
