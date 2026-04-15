@@ -64,17 +64,25 @@
       letter-spacing: 0.02em;
     }
 
-    .brand-badge {
-      width: 44px;
-      height: 44px;
-      display: grid;
-      place-items: center;
+    .profile-logo-wrap {
+      width: 56px;
+      height: 56px;
       border-radius: 14px;
-      background: linear-gradient(135deg, rgba(57, 242, 180, 0.2), rgba(142, 255, 216, 0.08));
-      border: 1px solid var(--line);
-      color: var(--accent);
-      box-shadow: var(--shadow);
-      font-weight: 900;
+      overflow: hidden;
+      border: 1px solid rgba(120, 255, 214, 0.14);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      background: rgba(57, 242, 180, 0.08);
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .profile-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(2.35);
+      transform-origin: center 30%;
     }
 
     .nav-links {
@@ -270,6 +278,13 @@
       margin: 0;
     }
 
+    .experience-date {
+      margin: 0 0 0.7rem;
+      color: var(--accent-2);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
     .skills {
       display: flex;
       flex-wrap: wrap;
@@ -428,7 +443,9 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a href="#home" class="brand">
-        <span class="brand-badge">HK</span>
+        <div class="profile-logo-wrap">
+          <img src="profile.jpg.jpeg" alt="Hamza Khaled Awad" class="profile-logo">
+        </div>
         <span>Hamza Khaled Awad</span>
       </a>
       <div class="nav-links">
@@ -472,8 +489,8 @@
               <span>Applied AI projects</span>
             </div>
             <div class="stat">
-              <strong>1</strong>
-              <span>Industry internship</span>
+              <strong>2</strong>
+              <span>Training & experience tracks</span>
             </div>
             <div class="stat">
               <strong>AI Graduate</strong>
@@ -493,7 +510,7 @@
         <h2 class="section-title">About Me</h2>
         <p class="section-subtitle">
           I enjoy building intelligent systems that connect strong technical implementation with practical needs.
-          My background includes academic AI projects, hands-on experimentation, and internship work involving OCR,
+          My background includes academic AI projects, hands-on experimentation, professional training, and internship work involving OCR,
           computer vision, NLP, and workflow automation.
         </p>
         <div class="grid-2">
@@ -503,7 +520,7 @@
           </div>
           <div class="card">
             <h3>Career Direction</h3>
-            <p>I am interested in AI engineering roles focused on machine learning, deep learning, NLP, and computer vision solutions.</p>
+            <p>I am interested in AI engineering roles focused on machine learning, deep learning, NLP, computer vision, and applied AI solutions.</p>
           </div>
         </div>
       </div>
@@ -512,13 +529,26 @@
     <section class="section" id="experience">
       <div class="container">
         <h2 class="section-title">Experience</h2>
-        <p class="section-subtitle">Hands-on work that strengthened my ability to apply AI in real business workflows.</p>
-        <div class="card">
-          <h3>AI Intern — Integrated Technology Group (ITG)</h3>
-          <p>
-            Worked on an AI-powered MRZ extraction pipeline for passports and civil ID documents within a hotel processing workflow.
-            Applied OCR, computer vision, and NLP techniques to automate identity data extraction and improve document handling efficiency.
-          </p>
+        <p class="section-subtitle">Hands-on training and practical experience that strengthened my ability to apply AI in real-world workflows.</p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>AI Intern — Integrated Technology Group (ITG)</h3>
+            <p class="experience-date">2025</p>
+            <p>
+              Worked on an AI-powered MRZ extraction pipeline for passports and civil ID documents within a hotel processing workflow.
+              Applied OCR, computer vision, and NLP techniques to automate identity data extraction and improve document handling efficiency.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>AI SPIRE Trainee — Istidama Consulting & Level Up Economy</h3>
+            <p class="experience-date">2026</p>
+            <p>
+              Completed applied AI training focused on Python, SQL, machine learning, deep learning, NLP, data pipelines,
+              analytics, Git/GitHub workflows, and practical AI engineering projects.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -526,7 +556,7 @@
     <section class="section" id="skills">
       <div class="container">
         <h2 class="section-title">Skills</h2>
-        <p class="section-subtitle">A mix of engineering tools, AI methods, and libraries used across my projects.</p>
+        <p class="section-subtitle">A mix of engineering tools, AI methods, and libraries used across my projects and training.</p>
         <div class="skills">
           <span class="chip">Python</span>
           <span class="chip">PyTorch</span>
@@ -543,6 +573,9 @@
           <span class="chip">Classification</span>
           <span class="chip">Model Evaluation</span>
           <span class="chip">Git & GitHub</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Data Pipelines</span>
+          <span class="chip">Analytics</span>
         </div>
       </div>
     </section>
@@ -703,6 +736,10 @@
             <div class="contact-item">
               <span>Email</span>
               <strong><a href="mailto:hamzehsrawi65@gmail.com">hamzehsrawi65@gmail.com</a></strong>
+            </div>
+            <div class="contact-item">
+              <span>Phone</span>
+              <strong><a href="tel:+962780854853">00962780854853</a></strong>
             </div>
             <div class="contact-item">
               <span>GitHub</span>
