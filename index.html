@@ -64,26 +64,27 @@
       letter-spacing: 0.02em;
     }
 
-.profile-logo-wrap {
-  width: 90px;
-  height: 90px;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(120, 255, 214, 0.14);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  background: rgba(57, 242, 180, 0.08);
-  position: relative;
-  flex-shrink: 0;
-}
+    .profile-logo-wrap {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(120, 255, 214, 0.14);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      background: rgba(57, 242, 180, 0.08);
+      position: relative;
+      flex-shrink: 0;
+    }
 
-.profile-logo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 18%;
-  display: block;
-  transform: scale(1.18);
-}
+    .profile-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+      display: block;
+      transform: scale(1.18);
+    }
+
     .nav-links {
       display: flex;
       align-items: center;
@@ -282,6 +283,22 @@
       color: var(--accent-2);
       font-weight: 700;
       font-size: 0.95rem;
+    }
+
+    .experience-image {
+      width: 100%;
+      margin-top: 1rem;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(120, 255, 214, 0.12);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    .experience-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
 
     .skills {
@@ -538,6 +555,10 @@
               Worked on an AI-powered MRZ extraction pipeline for passports and civil ID documents within a hotel processing workflow.
               Applied OCR, computer vision, and NLP techniques to automate identity data extraction and improve document handling efficiency.
             </p>
+
+            <div class="experience-image">
+              <img src="itg-photo.jpg" alt="Hamza Khaled Awad at ITG">
+            </div>
           </div>
 
           <div class="card">
